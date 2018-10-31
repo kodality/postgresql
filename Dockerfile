@@ -1,9 +1,9 @@
-FROM postgres:10.3
+FROM postgres:11.0
 
 RUN localedef -i et_EE -c -f UTF-8 -A /usr/share/locale/locale.alias et_EE.UTF-8
 
 RUN apt-get update && \
-    apt-get install -y git make flex bison gcc postgresql-server-dev-10
+    apt-get install -y git make flex bison gcc postgresql-server-dev-11
 RUN git clone https://github.com/postgrespro/jsquery.git && \
     chown postgres:postgres jsquery && \
     cd jsquery && \
