@@ -2,7 +2,7 @@
 
 repo="kodality"
 name="postgres"
-tag="12.1"
+tag="13.2"
 
 #docker login || exit 1
 docker build -t $repo/$name . || exit 1
